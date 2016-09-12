@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>Flower Power</title>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body ng-app="FlowerApp">
   <h1>Flower Power</h1>
+  <button ng-click="displayFlowers()"</button>
 
     <div ng-view></div>
 
@@ -19,10 +22,11 @@
 <!-- App specific files  -->
 <script type="text/javascript" src="app/app.js"></script>
 
+<script type="text/javascript" src="app/controllers/MainCtrl.js"></script>
+
 <!-- factories -->
 <script type="text/javascript" src="app/factories/FlowerFactory.js"></script>
 <!-- providers -->
 <script type="text/javascript" src="app/values/FirebaseKeys.js"></script>
-<script type="text/javascript" src="app/controllers/MainCtrl.js"></script>
 </body>
 </html>

@@ -5,12 +5,11 @@
 
 "use strict";
 
-app.controller("MainCtrl", function ($scope, $routeParams, FlowerFactory) {
+app.controller("MainCtrl", function ($scope, $routeParams, FlowerFactory, $q, $http) {
 
-  $scope.displayFlowers  = () => {
-    FlowerFactory.getFirebaseFlowers(flowersFromFirebase)
-      .then((flowers) => {
-        console.log(flowers);
+    FlowerFactory.getFirebaseFlowers()
+      .then((objFromFirebase) => {
+        console.log(objFromFirebase);
+        $scope.flowers = objFromFirebase;
       })
-  }
-});
+  });
