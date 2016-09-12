@@ -1,7 +1,16 @@
- <div ng-repeat="flower in flowers">
+ <div class="oneline" ng-repeat="flower in flowers">
         <h2>{{flower.title}}</h2>
         <p>Category: {{flower.category}}</p>
         <p>Description: {{flower.description}}</p>
-        <p>Description: {{flower.price}}</p>
+        <p>Price: {{flower.price}}</p>
 
 </div>
+
+
+
+<!-- <ul ng-repeat="(key, value) in players | groupBy: 'team'">
+  Group name: {{ key }}
+  <li ng-repeat="player in value">
+    player: {{ player.name }}
+  </li>
+</ul> -->
