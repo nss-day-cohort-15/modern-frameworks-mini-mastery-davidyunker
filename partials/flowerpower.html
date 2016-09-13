@@ -1,16 +1,22 @@
- <div class="oneline" ng-repeat="flower in flowers">
+<h1>Holiday</h1>
+ <div class="oneline" ng-repeat="flower in flowers" ng-if="flower.category === 'holiday' ">
         <h2>{{flower.title}}</h2>
-        <p>Category: {{flower.category}}</p>
         <p>Description: {{flower.description}}</p>
         <p>Price: {{flower.price}}</p>
 
 </div>
 
+<h1>Bereavement</h1>
+ <div class="oneline" ng-repeat="flower in flowers" ng-if="flower.category === 'bereavement'">
+        <h2>{{flower.title}}</h2>
+        <p>Description: {{flower.description}}</p>
+        <p>Price: {{flower.price}}</p>
+</div>
 
+<h1>Miscelleaneous</h1>
+ <div class="oneline" ng-repeat="flower in flowers" ng-if="flower.category === 'misc' ">
+        <h2>{{flower.title}}</h2>
+        <p>Description: {{flower.description}}</p>
+        <p>Price: {{flower.price}}</p>
 
-<!-- <ul ng-repeat="(key, value) in players | groupBy: 'team'">
-  Group name: {{ key }}
-  <li ng-repeat="player in value">
-    player: {{ player.name }}
-  </li>
-</ul> -->
+</div>
